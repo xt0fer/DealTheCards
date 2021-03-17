@@ -12,11 +12,16 @@ public class Deal {
     public static void main(String args[]) {
         Deal game = new Deal(4,5);
         List<Card> deck  = Card.newDeck();
+
+        // wha? witchcraft??
         Collections.shuffle(deck);
+
+        // generate a list of list of card
         ArrayList<ArrayList<Card>> hands = new ArrayList<>();
         for (int i=0; i < game.numHands; i++)
             hands.add(deal(deck, game.cardsPerHand));
 
+        // print them out.
         for (List<Card> hand: hands) {
             System.out.print("[ ");
             for (Card card: hand) {
