@@ -1,6 +1,7 @@
 /* "copied" from https://docs.oracle.com/javase/8/docs/technotes/guides/language/enums.html */
 import java.util.*;
 
+/* Maybe this should be refactored to have a Hand class which would be an ArrayList<Card> */
 public class Deal {
     private int numHands = 1;
     private int cardsPerHand = 1;
