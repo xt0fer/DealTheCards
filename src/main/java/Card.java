@@ -13,10 +13,6 @@ public class Card {
         this.rank = rank;
         this.suit = suit;
     }
-//    System.out.println("\u2665 This should be a Hearts suit symbol.");
-//        System.out.println("\u2666 This should be a Diamonds suit symbol.");
-//        System.out.println("\u2663 This should be a Clubs suit symbol.");
-//        System.out.println("\u2660 This should be a Spades suit symbol.");
 
     public Rank rank() { return rank; }
     public Suit suit() { return suit; }
@@ -38,7 +34,7 @@ public class Card {
     public String shortString() {
         String n = "";
         String s = "";
-        switch(suit) {
+        switch(suit) { // UNICODE - look it up
             case CLUBS: s = "\u2663";
                 break;
             case DIAMONDS: s = "\u2666";
