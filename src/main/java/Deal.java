@@ -14,7 +14,15 @@ public class Deal {
         List<Card> deck  = Card.newDeck();
 
         // wha? witchcraft??
-        Collections.shuffle(deck);
+        //Collections.shuffle(deck);
+        // Use this if you want to make sure you get a random shuffle each time.
+
+        // or if I wanted to make sure I got the SAME cards each time
+        // in order to TEST a game using a Deck and the Hands built from it...
+        // I can force the order of the cards by setting the Random seed used when shuffling
+        // I pick any integer... I used 102
+        // first card in first hand should be five of hearts... every time
+        Collections.shuffle(deck, new Random(102));
 
         // generate a list of list of card
         ArrayList<ArrayList<Card>> hands = new ArrayList<>();
