@@ -25,6 +25,15 @@ public class Deal {
             System.out.println("]");
 
         }
+
+        for (List<Card> hand: hands) {
+            System.out.print("[ ");
+            for (Card card: hand) {
+                System.out.print(card.shortString()+", ");
+            }
+            System.out.println("]");
+
+        }
     }
 
     public static ArrayList<Card> deal(List<Card> deck, int n) {

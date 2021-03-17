@@ -13,6 +13,10 @@ public class Card {
         this.rank = rank;
         this.suit = suit;
     }
+//    System.out.println("\u2665 This should be a Hearts suit symbol.");
+//        System.out.println("\u2666 This should be a Diamonds suit symbol.");
+//        System.out.println("\u2663 This should be a Clubs suit symbol.");
+//        System.out.println("\u2660 This should be a Spades suit symbol.");
 
     public Rank rank() { return rank; }
     public Suit suit() { return suit; }
@@ -30,4 +34,49 @@ public class Card {
     public static ArrayList<Card> newDeck() {
         return new ArrayList<Card>(protoDeck); // Return copy of prototype deck
     }
+
+    public String shortString() {
+        String n = "";
+        String s = "";
+        switch(suit) {
+            case CLUBS: s = "\u2663";
+                break;
+            case DIAMONDS: s = "\u2666";
+                break;
+            case HEARTS: s = "\u2665";
+                break;
+            case SPADES: s = "\u2660";
+                break;
+        }
+        switch(rank) {
+            case DEUCE: n = "2";
+                break;
+            case THREE: n = "3";
+                break;
+            case FOUR: n = "4";
+                break;
+            case FIVE: n = "5";
+                break;
+            case SIX: n = "6";
+                break;
+            case SEVEN: n = "7";
+                break;
+            case EIGHT: n = "8";
+                break;
+            case NINE:  n = "9";
+                break;
+            case TEN: n = "10";
+                break;
+            case JACK: n = "J";
+                break;
+            case QUEEN: n = "Q";
+                break;
+            case KING: n = "K";
+                break;
+            case ACE: n = "A";
+                break;
+        }
+        return n+s;
+    }
+
 }
