@@ -1,3 +1,4 @@
+/* "copied" from https://docs.oracle.com/javase/8/docs/technotes/guides/language/enums.html */
 import java.util.*;
 
 public class Card {
